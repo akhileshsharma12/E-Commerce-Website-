@@ -51,7 +51,8 @@ e-commerce-website/
 
 ## Screenshots
 
-_Add screenshots of your website here._
+
+![Homepage Screenshot](images/screenshot.png)
 
 ## License
 
