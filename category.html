@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E-Commerce Website </title>
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    .category {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .category-col {
+        flex-basis: 31%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .category-col img {
+        width: 100%;
+        height: 300px;
+        display: block;
+    }
+
+    .layer {
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .layer:hover {
+        background: rgba(226, 0, 0, 0.7);
+    }
+
+    .layer h3 {
+        width: 100%;
+        font-size: 22px;
+        font-weight: 500;
+        color: #fff;
+        bottom: 0%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%);
+        transition: 0.5s;
+        opacity: 1;
+    }
+
+    .layer:hover h3 {
+        bottom: 50%;
+        opacity: 1;
+    }
+
+    .selection_category {
+        padding: 30px 40px;
+        margin-top: 30px;
+    }
+
+    .selection_category {
+        height: 300px;
+        padding: 20px 30px;
+        padding-top: 40px;
+        border-radius: 20px;
+        background: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-position: center;
+        background-size: cover;
+    }
+    .select_category_wrapper-2 {
+        height: 300px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px 30px;
+        border-radius: 20px;
+    }
+
+    .category-1 {
+        width: 350px;
+        display: flex;
+        align-items: center;
+        border: 2px solid green;
+        padding: 10px 20px;
+        border-radius: 15px;
+        background: #fff;
+    }
+
+    .category-1_text {
+        width: 67%;
+        font-size: 14px;
+    }
+
+    .category-1_img {
+        width: 28%;
+    }
+
+    .category-1_img img {
+        width: 100%;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+
+
+
+    /* .layer h3 {
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 25px;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .layer:hover h3 {
+        bottom: 50%;
+        opacity: 1;
+    } */
+</style>
+
+<body>
+
+    <!--From Uiverse.io by shadowfax29-->
+    <div class="loader" id="loader-2">
+
+        <div class="loading" id="loading">
+            <svg viewBox="0 0 187.3 93.7" height="200px" width="300px" class="svgbox">
+                <defs>
+                    <linearGradient y2="0%" x2="100%" y1="0%" x1="0%" id="gradient">
+                        <stop stop-color="pink" offset="0%"></stop>
+
+                        <stop stop-color="blue" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+
+                <path stroke="url(#gradient)"
+                    d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z">
+                </path>
+            </svg>
+
+        </div>
+    </div>
+
+    <!--Header Section-->
+    <div class="container" style="background: #fff; position: sticky; top: 0;">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images//logo.png" alt="" width="125px">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="category.html">Category</a></li>
+                    <li><a href="contact page.html">Contact</a></li>
+                    <li><a href="account page.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="shoping cart.html"><img src="images/cart.png" alt="" width="30px" height="30px"></a>
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <!-- <div class="row">
+                <div class="col-2">
+                    <h1>Give Your Workout <br> A New Style !</h1>
+                    <p>Success isn't about always greatness. it's about consistency. Consistent <br> hard work gain
+                        success. Greatness will come.</p>
+
+                    <a href="#" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/image1.png" alt="">
+                </div>
+            </div> -->
+    </div>
+
+
+    <!--campus-->
+    <!-- <div class="category">
+
+        <div class="row" style="display: flex; justify-content: space-evenly;">
+            <a href="mens_section.html">
+                <div class="category-col">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsXHLdWVHr6sxVl5KiVDalKFr-alzVuMbzEs0Ryap9HOBpYRgWqTUFR1PxXkTwbTwZ__A&usqp=CAU" alt="">
+                    <div class="layer">
+                        <h3> Men's Cloting </h3>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="womens_section.html">
+                <div class="category-col">
+                    <img src="data:image/jpeg;base64,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" alt="">
+                    <div class="layer">
+                        <h3> Women's Cloting </h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div> -->
+
+    <!--Category selection section-->
+    <div class="sub-container" >
+
+
+        <section class="selection_category">
+
+            <div class="select_category_wrapper">
+             
+              
+            </div>
+
+            <div class="select_category_wrapper-2">
+                <a href="womens_section.html">
+                    <div class="category-1" style="border: 2px solid yellow; background: rgb(249, 249, 223); ">
+                        <div class="category-1_text">
+                            <h3>Women's wearable collection</h3>
+                        </div>
+                        <div class="category-1_img">
+                            <img src="images/user-3.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="mens_section.html">
+                    <div class="category-1" style="border: 2px solid rgb(248, 8, 8); background: rgb(246, 213, 213);">
+                        <div class="category-1_text">
+                            <h3>men's wearable collection </h3>
+                        </div>
+                        <div class="category-1_img">
+                            <img src="images/user-2.png" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            
+
+        </section>
+
+
+        <!--Features categories-->
+        <!-- <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3 title-covered-image">
+                    <img src="images/category-1.jpg" alt="">
+                    <div class="layer">
+                        <h3> Mens Fashion </h3>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img src="images/category-2.jpg" alt="">
+                </div>
+                <div class="col-3">   
+                    <img src="images/category-3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+        <!--Featured Products-->
+        <div class="small-container">
+            <h2 class="title">Featured Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <a href="product details 1.html"><img src="images/product-1.jpg" alt=""></a>
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/product-2.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/product-3.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="E-commerce website Assets/E-commerce website Assets/Product C2 b.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+            </div>
+
+            <h2 class="title">Latest Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/product-5.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/product-6.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="Ecommerce_Frontend_Assets/Assets/product_9.png" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/product-8.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/product-9.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/product-10.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/product-11.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+                <div class="col-4">
+                    <img src="Ecommerce_Frontend_Assets/Assets/product_13.png" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>$50</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!--Footer Section-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="">
+                    <p>our purpose Is to Sustainably Make the pleasure and Benefits of sports Accessible to the Many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Akhilesh Sharma</p>
+        </div>
+    </div>
+
+
+
+    <!--Script File Linking-->
+    <script src="script.js"></script>
+</body>
+
+</html>

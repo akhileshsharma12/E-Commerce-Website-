@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    body {
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact_us {
+        width: 90%;
+        margin: 50px auto;
+        max-width: 1200px;
+    }
+
+    .contact_box {
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .contact_box_left, .contact_box_right {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .contact_box_left {
+        flex: 1 1 100%;
+        background: #e8e7e7;
+    }
+
+    .contact_box_right {
+        flex: 1 1 100%;
+        background: #1c005b;
+        color: #fff;
+    }
+
+    .contact_us h1 {
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+
+    .contact_us p {
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .input-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .input-row .input-group {
+        flex: 1 1 100%;
+        color: #1c005b;
+    }
+
+    .input-row .input-group label {
+        font-weight: 500;
+    }
+
+    input, textarea {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    label {
+        margin-bottom: 6px;
+        display: block;
+        color: #1c005b;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    button {
+        background: #1c005b;
+        width: 100%;
+        max-width: 150px;
+        border: none;
+        color: #fff;
+        height: 35px;
+        border-radius: 30px;
+        margin-top: 20px;
+        box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .contact_box_left h3 {
+        color: #1c005b;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #fff;
+    }
+
+    table td {
+        padding: 10px;
+        vertical-align: top;
+        font-size: 0.9rem;
+    }
+
+    .contact_us_keyPoints {
+        margin-block: 20px;
+    }
+
+    .contact_us_keyPoints h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact_us_keyPoints p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+        .contact_box_left, .contact_box_right {
+            flex: 1 1 50%;
+        }
+
+        .contact_box_right {
+            display: block;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .contact_box_left, .contact_box_right {
+            flex: 1 1 100%;
+        }
+
+        .contact_box_right {
+            display: none;
+        }
+
+        .contact_us h1 {
+            font-size: 1.5rem;
+        }
+
+        .contact_us p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo img {
+            max-width: 125px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    .footer {
+        background: #1c005b;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer-col-1 .app-logo img {
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    .footer-col-2 img {
+        width: 150px;
+    }
+
+    .footer-col-3 ul, .footer-col-4 ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer-col-3 ul li, .footer-col-4 ul li {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <!--Header Section-->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="E-Commerce Logo">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="category.html">Category</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="shopping-cart.html"><img src="images/cart.png" alt="Shopping Cart"></a>
+            <img src="images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!--Contact Us Section-->
+    <div class="contact_us">
+        <h1>Contact With Us</h1>
+        <p>We would love to respond to your queries and help you succeed. Feel free to get in touch with us.</p>
+        
+        <div class="contact_box">
+            <div class="contact_box_left">
+                <h3>Send your request</h3>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="68ec8cdc-0549-4f79-9c4d-b4d5eb7caad0">
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter Your Name ..." required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" name="phone" placeholder="Enter Your Contact No ..." required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter Your Email ..." required>
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter Your Subject ..." required>
+                        </div>
+                    </div>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message to Us" required></textarea>
+
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+            <div class="contact_box_right">
+                <!-- Add content for contact_box_right if necessary -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col-1">
+                <div class="app-logo">
+                    <img src="images/logo.png" alt="App Logo">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/footer-img.png" alt="Footer Image">
+            </div>
+            <div class="footer-col-3">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">Contact 1</a></li>
+                    <li><a href="#">Contact 2</a></li>
+                    <li><a href="#">Contact 3</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">About 1</a></li>
+                    <li><a href="#">About 2</a></li>
+                    <li><a href="#">About 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

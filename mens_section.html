@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E-Commerce Website </title>
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    .category {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .category-col {
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .category-col img {
+        width: 100%;
+        height: 300px;
+        display: block;
+    }
+
+    .layer {
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .layer:hover {
+        background: rgba(226, 0, 0, 0.7);
+    }
+
+    .layer h3 {
+        width: 100%;
+        font-size: 22px;
+        font-weight: 500;
+        color: #fff;
+        bottom: 0%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%);
+        transition: 0.5s;
+        opacity: 1;
+    }
+
+    .layer:hover h3 {
+        bottom: 50%;
+        opacity: 1;
+    }
+
+    .offer-limited {
+        padding: 35px 60px;
+    }
+    .col-limited img {
+        background: rgba(248, 157, 87, 0.6);
+        border-radius: 23px;
+    }
+
+
+    /* Media Querys  for pixels above 600 */
+    @media (max-width:600px) {
+        .category {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+        }
+        .category-col img {
+            height: 130px;
+        }
+    }
+    
+
+    /* .layer h3 {
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 25px;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .layer:hover h3 {
+        bottom: 50%;
+        opacity: 1;
+    } */
+</style>
+
+<body>
+
+     <!--From Uiverse.io by shadowfax29-->
+     <div class="loader" id="loader-3">
+
+        <div class="loading" id="loading">
+            <svg viewBox="0 0 187.3 93.7" height="200px" width="300px" class="svgbox">
+                <defs>
+                    <linearGradient y2="0%" x2="100%" y1="0%" x1="0%" id="gradient">
+                        <stop stop-color="pink" offset="0%"></stop>
+
+                        <stop stop-color="blue" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+
+                <path stroke="url(#gradient)"
+                    d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z">
+                </path>
+            </svg>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images//logo.png" alt="" width="125px">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="category.html">Category</a></li>
+                    <li><a href="contact page.html">Contact</a></li>
+                    <li><a href="account page.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="shoping cart.html"><img src="images/cart.png" alt="" width="30px" height="30px"></a>
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <!-- <div class="row">
+                <div class="col-2">
+                    <h1>Give Your Workout <br> A New Style !</h1>
+                    <p>Success isn't about always greatness. it's about consistency. Consistent <br> hard work gain
+                        success. Greatness will come.</p>
+
+                    <a href="#" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/image1.png" alt="">
+                </div>
+            </div> -->
+    </div>
+
+
+    <!--campus-->
+    <!-- <div class="category">
+
+        <div class="row">
+            <a href="mens section.html">
+                <div class="category-col">
+                    <img src="Ecommerce_Frontend_Assets/Assets/product_23.png" alt="">
+                    <div class="layer">
+                        <h3> Men's Cloting </h3>
+                    </div>
+                </div>
+            </a>
+            <a href="view.html">
+                <div class="category-col">
+                    <img src="Ecommerce_Frontend_Assets/Assets/product_28.png" alt="">
+                    <div class="layer">
+                        <h3> Child's Cloting </h3>
+                    </div>
+                </div>
+            </a>
+            <a href="view.html">
+                <div class="category-col">
+                    <img src="Ecommerce_Frontend_Assets/Assets/product_10.png" alt="">
+                    <div class="layer">
+                        <h3> Women's Cloting </h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div> -->
+
+    <!--Features categories-->
+    <!-- <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3 title-covered-image">
+                    <img src="images/category-1.jpg" alt="">
+                    <div class="layer">
+                        <h3> Mens Fashion </h3>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img src="images/category-2.jpg" alt="">
+                </div>
+                <div class="col-3">
+                    <img src="images/category-3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!--Offer-->
+    <div class="offer-limited">
+        <div class="col-limited">
+            <img src="Ecommerce_Frontend_Assets/Assets/banner_mens.png" alt="" width="100%">
+        </div>
+    </div>
+
+       <!--Featured Products-->
+       <div class="small-container">
+
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="product details 1.html"><img src="images/product-1.jpg" alt="" height="289px"></a>
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="Ecommerce_Frontend_Assets/Assets/product_14.png" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="Ecommerce_Frontend_Assets/Assets/product_15.png" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="Ecommerce_Frontend_Assets/Assets/product_16.png" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <img src="Ecommerce_Frontend_Assets/Assets/product_17.png" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="Ecommerce_Frontend_Assets/Assets/product_18.png" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="Ecommerce_Frontend_Assets/Assets/product_19.png" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="Ecommerce_Frontend_Assets/Assets/product_20.png" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+        </div>
+
+
+         <!--Pagination -->
+         <div class="page-btn">
+            <span>1</span>
+            <a href="products2.html"><span>2</span></a>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+
+    </div>
+ 
+
+  
+
+    <!--Footer Section-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="">
+                    <p>our purpose Is to Sustainably Make the pleasure and Benefits of sports Accessible to the Many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Akhilesh Sharma</p>
+        </div>
+    </div>
+
+
+
+    <!--Script File Linking-->
+    <script src="script.js"></script>
+</body>
+
+</html>

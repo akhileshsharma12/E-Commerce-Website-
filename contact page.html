@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E-Commerce Website </title>
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    body {
+        font-size: 14px;
+    }
+    .contact_us {
+        width: 80%;
+        margin: 50px auto;
+    }
+    .contact_box {
+        background: #fff;
+        display: flex;
+    }
+    .contact_box_left {
+        flex-basis: 60%;
+        padding: 40px 60px;
+        background: #e8e7e7;
+    }
+    .contact_box_right {
+        flex-basis: 40%;
+        padding: 40px;
+        background: #1c005b;
+        color: #fff;
+    }
+    .contact_us h1 {
+        margin-bottom: 10px;
+    }
+    .contact_us p {
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+    .input-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .input-row .input-group {
+        flex-basis: 45%;
+        color: #1c005b;
+    }
+    .input-row .input-group label {
+        font-weight: 500;
+    }
+    input {
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #ccc;
+    }
+    textarea {
+        width: 100%;
+        outline: none;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    label {
+        margin-bottom: 6px;
+        display: block;
+        padding-bottom: 5px;
+        color: #1c005b;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    button {
+        background: #1c005b;
+        width: 100px;
+        border: none;
+        outline: none;
+        color: #fff;
+        height: 35px;
+        border-radius: 30px;
+        margin-top: 20px;
+        box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+    }
+    .contact_box_left h3 {
+        color: #1c005b;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    tr td:first-child {
+        padding-right: 20px;
+    }
+    tr td {
+        padding-top: 40px;
+        max-width: 100px;
+    }
+    .contact_us .p2 {
+        margin-block: 20px;
+    }
+    .contact_us_keyPoints {
+        margin-block: 20px;
+    }
+    .contact_us_keyPoints .p2 {
+        font-size: 14px;
+    }
+
+    @media (min-width: 600px) and (max-width: 1024px) {
+        .contact_box_left, .contact_box_right {
+            flex-basis: 100%;
+        }
+    }
+    @media (max-width: 600px) {
+        .contact_box_left, .contact_box_right {
+            flex-basis: 100%;
+        }
+
+        .contact_box_right {
+            display: none;
+        }
+
+        .contact_us h1 {
+            font-size: 20px;
+        }
+
+        .contact_us p {
+            font-size: 15px;
+        }
+    }
+
+
+</style>
+
+<body>
+
+     <!--From Uiverse.io by shadowfax29-->
+     <div class="loader" id="loader-2">
+
+        <div class="loading" id="loading">
+            <svg viewBox="0 0 187.3 93.7" height="200px" width="300px" class="svgbox">
+                <defs>
+                    <linearGradient y2="0%" x2="100%" y1="0%" x1="0%" id="gradient">
+                        <stop stop-color="pink" offset="0%"></stop>
+
+                        <stop stop-color="blue" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+
+                <path stroke="url(#gradient)"
+                    d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z">
+                </path>
+            </svg>
+
+        </div>
+    </div>
+
+    <!--Header Section-->
+    <div class="container" style="background: #fff; position: sticky; top: 0;">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images//logo.png" alt="" width="125px">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="category.html">Category</a></li>
+                    <li><a href="contact page.html">Contact</a></li>
+                    <li><a href="/account page.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="/shoping cart.html"><img src="images/cart.png" alt="" width="30px" height="30px"></a>
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <!-- <div class="row">
+                <div class="col-2">
+                    <h1>Give Your Workout <br> A New Style !</h1>
+                    <p>Success isn't about always greatness. it's about consistency. Consistent <br> hard work gain
+                        success. Greatness will come.</p>
+
+                    <a href="#" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/image1.png" alt="">
+                </div>
+            </div> -->
+    </div>
+
+
+    <!--Contact Us Section-->
+    <div class="contact_us">
+        <h1>Contact With Us </h1>
+        <p>We would love to respon to your queries and help you succeed. Feel free to get in touch with us .</p>
+        
+        <div class="contact_box">
+            <div class="contact_box_left">
+                <h3>Send your request</h3>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="68ec8cdc-0549-4f79-9c4d-b4d5eb7caad0">
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label> Name </label>
+                            <input type="text" name="Name :" placeholder="Enter Your Name ..." style="border: none;outline: none;width: 100%;border-bottom: 1px solid #ccc;padding-bottom: 5px; padding-top: 5px;" required>
+                        </div>
+                        <div class="input-group">
+                            <label> Phone </label>
+                            <input type="text" name="Phone :" placeholder="Enter Your Contact No ..." style="border: none;outline: none;width: 100%;border-bottom: 1px solid #ccc;padding-bottom: 5px; padding-top: 5px;" required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label> Email </label>
+                            <input type="email" name="Email :" placeholder="Enter Your Email ..." style="border: none;outline: none;width: 100%;border-bottom: 1px solid #ccc;padding-bottom: 5px; padding-top: 5px;" required>
+                        </div>
+                        <div class="input-group">
+                            <label> Subject </label>
+                            <input type="text" name="Subject :" placeholder="Enter Your Subject ..." style="border: none;outline: none;width: 100%;border-bottom: 1px solid #ccc;padding-bottom: 5px; padding-top: 5px;" required>
+                        </div>
+                    </div>
+
+                    <label> Message </label>
+                    <textarea rows="5" name="Message :" placeholder="Your Message to US" required></textarea>
+
+                    <button type="submit"> SEND </button>
+
+                </form>
+            </div>
+            <div class="contact_box_right">
+                <h3>Reach Us</h3>
+
+                <table>
+                    <tr>
+                        <td> Company </td>
+                        <td> E-Commerce company for Men's , Kids's and Women's clothing </td>
+                    </tr>
+                    <tr>
+                        <td> Email </td>
+                        <td> akhileshsh421@gmail.com </td>
+                    </tr>
+                    <tr>
+                        <td> Phone </td>
+                        <td> +91 8830947118 </td>
+                    </tr>
+                    <tr>
+                        <td> Address </td>
+                        <td> C:// Acer/ Web Development Folder / E-Commerce Website Project </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="contact_us_keyPoints">
+            <h2> Key Features </h2>
+
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, nostrum aperiam magni minima pariatur suscipit ex consectetur praesentium. Ducimus, incidunt. Temporibus non, magni adipisci nihil optio quo sed voluptas reprehenderit.</p>
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia commodi et vitae voluptate molestias quas. Doloremque sint est distinctio quibusdam temporibus enim esse! Nobis maiores assumenda aliquid et dolor libero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quas!</p>
+            <p class="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel maxime quod, cum exercitationem veritatis quis.</p>
+            <p class="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt reiciendis tempore animi temporibus consequatur! Ratione repellendus velit expedita ab laborum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque obcaecati aliquam porro molestias repudiandae. Temporibus voluptate similique tempore vero eos aperiam necessitatibus, reprehenderit iste minima sint. Ex sequi consequatur sint.</p>
+            <p class="p2">Lorem  explicabo ut, quo amet deleniti et nostrum. Mollitia ducimus, expedita harum soluta voluptatum reprehenderit.</p>
+        </div>
+    </div>
+
+
+    <!--Footer Section-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="">
+                    <p>our purpose Is to Sustainably Make the pleasure and Benefits of sports Accessible to the Many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Akhilesh Sharma</p>
+        </div>
+    </div>
+
+
+
+    <!--Script File Linking-->
+    <script src="script.js">
+        
+    </script>
+</body>
+
+</html>

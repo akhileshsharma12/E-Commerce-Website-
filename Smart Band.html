@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E-Commerce Website </title>
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!--From Uiverse.io by shadowfax29-->
+    <div class="loader" id="loader-3">
+
+        <div class="loading" id="loading">
+            <svg viewBox="0 0 187.3 93.7" height="200px" width="300px" class="svgbox">
+                <defs>
+                    <linearGradient y2="0%" x2="100%" y1="0%" x1="0%" id="gradient">
+                        <stop stop-color="pink" offset="0%"></stop>
+
+                        <stop stop-color="blue" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+
+                <path stroke="url(#gradient)"
+                    d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z">
+                </path>
+            </svg>
+
+        </div>
+    </div>
+
+
+    <!-- <div class="header"> -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images//logo.png" alt="" width="125px">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="category.html">Category</a></li>
+                    <li><a href="contact page.html">Contact</a></li>
+                    <li><a href="account page.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" alt="" width="30px" height="30px">
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <!-- <div class="row">
+                <div class="col-2">
+                    <h1>Give Your Workout <br> A New Style !</h1>
+                    <p>Success isn't about always greatness. it's about consistency. Consistent <br> hard work gain
+                        success. Greatness will come.</p>
+
+                    <a href="#" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/image1.png" alt="">
+                </div>
+            </div> -->
+    </div>
+
+    <!--Single Product Section-->
+    <div class="small-container single-product" style="padding-bottom: 60px;">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/exclusive.png" alt="" width="100%" id="product-img"
+                    style="background-color: rgb(255, 230, 225);">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/exclusive.png" alt="" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/exclusive.png" alt="" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/exclusive.png" alt="" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/exclusive.png" alt="" width="100%" class="small-img">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-2">
+                <p>Home / T-Shirt</p>
+                <h1> Smart Band Watch Ultra 2 </h1>
+                <h4>$50.00</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <input type="number" value="1">
+                <a href="#" class="btn">Add to cart</a>
+
+                <h3>Products Details <i class="fa-solid fa-star"></i></h3>
+                <p>Give your summer wordrobe a style upgrade with the XHR Men's Active T-Shirt. Team it with a pair of
+                    shorts for your morning workout or a denims for an evening out with the guys. </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--Featured Products-->
+    <div class="small-container">
+
+
+        <!-- <div class="row">
+            <div class="col-4">
+                <img src="images/product-1.jpg" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-2.jpg" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-3.jpg" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product-4.jpg" alt="">
+                <h4>Red Printed Tshirt</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>$50</p>
+            </div>
+        </div> -->
+
+
+    </div>
+
+
+
+
+    <!--Footer Section-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="">
+                    <p>our purpose Is to Sustainably Make the pleasure and Benefits of sports Accessible to the Many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Akhilesh Sharma</p>
+        </div>
+    </div>
+
+
+
+    <!--Script File Linking-->
+    <script src="script.js"></script>
+</body>
+
+</html>
